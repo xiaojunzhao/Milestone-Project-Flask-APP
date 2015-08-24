@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+  body
+  {
+      background-image: url(http://www.offthegridnews.com/wp-content/uploads/2014/08/stock-market-stockrockandroll.jpg) ;
+      background-size: 100%;
+      
+   
+   }
+  h1{
+      color: black;
+      text-align: center;
+      font-family:Arial
+  }
+  h3{
+      color: black;
+      text-align: left
+  
+  
+  }
+  .outsidebox {margin: 5em auto; width: 60em; border: 5px solid #8AC007;
+	              padding: 0.8em; background: #d0e4fe;}
+	              
+	.innerbox { text-align: left; font-size :1.0em; padding: 0.3em; margin-bottom: 1em;baground : #fafafa;}
+
+
+
+</style>
+</head>
+
+<body>
+  
+    <div class = "outsidebox" >
+        <h1 >Milestone Project</h1>
+        <div class = "innerbox">
+        <h3> Please enter a stocker ticker symbol (eg. UTL) and check one of the following features</h3>
+            <form id = "input" method = "post" action = "index">
+                <p style= "text-align : left">
+                Input ticker name: 
+                <input type = "text" name =  "ticker">
+                </p>
+               <p style= "text-align : left">
+                Closing Price:
+                <input type = "radio"  name = "features" value = "close">
+                </p>
+                <p style= "text-align : left">
+                Volume: 
+                <input type = "radio" name = "features" value = "volume">
+                </p>
+                <p style = "text-align": "left">
+                Adjusted Closing Price:
+                <input type = "radio" name = "features" value = "adj_close">
+                </p>          
+                <p style= "text-align : left">
+                <input type = "submit" value = "Okay">
+                </p>
+            
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
