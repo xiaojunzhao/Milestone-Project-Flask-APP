@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template,request
 import csv
 import json
@@ -7,7 +8,7 @@ from bokeh.resources import CDN
 from bokeh.embed import file_html
 from bokeh.embed import components
 
-import pandas as pd
+#import pandas as pd
 import numpy as np
 
 f =  open('WIKI_tickers.txt','r')
@@ -86,4 +87,6 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(debug=True,port=33507)
+    port = int(os.environ.get('PORT',5000))
+    app.run(host = '0.0.0.0',port = port, debug=True)
+    #app.run(debug = True)
